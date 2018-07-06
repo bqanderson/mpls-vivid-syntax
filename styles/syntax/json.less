@@ -9,9 +9,14 @@
   }
 
   .syntax--meta.syntax--structure.syntax--dictionary.syntax--json, .syntax--meta.syntax--structure.syntax--array.syntax--json {
+    & > .syntax--key.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+    & > .syntax--key.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+      color: @hue-5-2;
+    }
+
     & > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
     & > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
-      color: @hue-2;
+      color: @hue-2-2;
     }
 
     & > .syntax--constant.syntax--language.syntax--json {
