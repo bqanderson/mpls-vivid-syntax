@@ -1,5 +1,8 @@
-// Language syntax highlighting
+////////////////////////////////////////////////////////////////
+// Language syntax highlighting ////////////////////////////////
+////////////////////////////////////////////////////////////////
 
+// Comment Syntax //////////////////////////////////////////////
 .syntax--comment {
   color: @mono-3;
   font-style: italic;
@@ -8,7 +11,9 @@
     color: @hue-2-2;
   }
 }
+////////////////////////////////////////////////////////////////
 
+// Entity Syntax ///////////////////////////////////////////////
 .syntax--entity {
 
   &.syntax--name.syntax--type {
@@ -18,8 +23,35 @@
   &.syntax--other.syntax--inherited-class {
     color: @hue-4;
   }
-}
 
+  &.syntax--name.syntax--function {
+    color: @hue-2;
+  }
+
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class {
+    color: @hue-6-2;
+  }
+
+  &.syntax--name.syntax--section {
+    color: @hue-2;
+  }
+
+  &.syntax--name.syntax--tag {
+    color: @hue-5-2;
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    color: @hue-6;
+
+    &.syntax--id {
+      color: @hue-2;
+    }
+  }
+}
+////////////////////////////////////////////////////////////////
+
+// Keyword Syntax //////////////////////////////////////////////
 .syntax--keyword {
   color: @hue-3-2;
 
@@ -39,7 +71,9 @@
     color: @hue-6;
   }
 }
+////////////////////////////////////////////////////////////////
 
+// Storage Syntax //////////////////////////////////////////////
 .syntax--storage {
   color: @hue-3-2;
 
@@ -57,7 +91,9 @@
     }
   }
 }
+////////////////////////////////////////////////////////////////
 
+// Constant Syntax /////////////////////////////////////////////
 .syntax--constant {
   color: @hue-6;
 
@@ -81,7 +117,9 @@
     color: @hue-1;
   }
 }
+////////////////////////////////////////////////////////////////
 
+// Variable Syntax /////////////////////////////////////////////
 .syntax--variable {
   color: @hue-5-2;
 
@@ -93,7 +131,9 @@
     color: @hue-1;
   }
 }
+////////////////////////////////////////////////////////////////
 
+// String Syntax ///////////////////////////////////////////////
 .syntax--string {
   color: @hue-4;
 
@@ -109,7 +149,9 @@
     color: @hue-5-2;
   }
 }
+////////////////////////////////////////////////////////////////
 
+// Puncuation Syntax ///////////////////////////////////////////
 .syntax--punctuation {
   &.syntax--definition {
     &.syntax--comment {
@@ -153,7 +195,9 @@
     }
   }
 }
+////////////////////////////////////////////////////////////////
 
+// Support Syntax //////////////////////////////////////////////
 .syntax--support {
   &.syntax--class {
     color: @hue-6-2;
@@ -166,39 +210,18 @@
   &.syntax--function  {
     color: @hue-1;
 
+    &.syntax--css {
+      color: @mono-1-2;
+    }
+
     &.syntax--any-method {
       color: @hue-2;
     }
   }
 }
+////////////////////////////////////////////////////////////////
 
-.syntax--entity {
-  &.syntax--name.syntax--function {
-    color: @hue-2;
-  }
-
-  &.syntax--name.syntax--class,
-  &.syntax--name.syntax--type.syntax--class {
-    color: @hue-6-2;
-  }
-
-  &.syntax--name.syntax--section {
-    color: @hue-2;
-  }
-
-  &.syntax--name.syntax--tag {
-    color: @hue-5-2;
-  }
-
-  &.syntax--other.syntax--attribute-name {
-    color: @hue-6;
-
-    &.syntax--id {
-      color: @hue-2;
-    }
-  }
-}
-
+// Meta Syntax /////////////////////////////////////////////////
 .syntax--meta {
   &.syntax--class {
     color: @hue-6-2;
@@ -239,28 +262,39 @@
     color: @hue-1;
   }
 }
+////////////////////////////////////////////////////////////////
 
+// Misc Syntax /////////////////////////////////////////////////
 .syntax--underline {
   text-decoration: underline;
 }
 
 .syntax--none {
-  color: @hue-1;
+  color: @mono-1-2;
 }
 
 .syntax--invalid {
   &.syntax--deprecated {
     color: @syntax-deprecated-fg !important;
     background-color: @syntax-deprecated-bg !important;
+
+    .syntax--css {
+      color: @syntax-deprecated-fg !important;
+    }
   }
+
   &.syntax--illegal {
     color: @syntax-illegal-fg !important;
     background-color: @syntax-illegal-bg !important;
   }
 }
+////////////////////////////////////////////////////////////////
 
-// Languages -------------------------------------------------
+////////////////////////////////////////////////////////////////
+// Languages ///////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 
+// Markup Syntax ///////////////////////////////////////////////
 .syntax--markup {
   &.syntax--bold {
     color: @hue-6;
@@ -304,3 +338,4 @@
     color: @hue-2;
   }
 }
+////////////////////////////////////////////////////////////////

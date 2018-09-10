@@ -1,10 +1,11 @@
 .syntax--source.syntax--css {
-  // highlight properties/values if they are supported
-  .syntax--property-name,
+  // highlight properties if they are supported
+  .syntax--property-name {
+    color: @hue-1;
+  }
+
+  // highlight values if they are supported
   .syntax--property-value {
-    color: @mono-2;
-    &.syntax--support {
-      color: @hue-1;
-    }
+    color: @mono-1-2;
   }
 }
